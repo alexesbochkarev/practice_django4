@@ -1,0 +1,23 @@
+site_name: Practice Django
+
+#site_url: https://example.com/
+nav:
+    - Home: index.md
+    - About: about.md
+    - Dev: dev.md
+    - Settings: settings.md
+    - Blog: blog/models.md
+    - Pip: pip.md
+theme: readthedocs
+
+dev_addr:
+    127.0.0.1:8200
+
+collapse_single_pages: True
+
+plugins:
+    - search
+    - awesome-pages
+
+site_author:
+    Алексей Бочкарёв
