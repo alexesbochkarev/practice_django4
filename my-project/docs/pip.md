@@ -1,35 +1,88 @@
 practice_django4
 
-pip install django
+# Начало работы
 
-# https://django-crispy-forms.readthedocs.io/en/latest/install.html
-pip install django-crispy-forms==1.14.0
+`pip install django`
 
-# https://github.com/un1t/django-cleanup
-pip install django-cleanup==6.0.0
+## Формы
 
-pip install pillow==9.2.0
+[cripsy-forms](https://django-crispy-forms.readthedocs.io/en/latest/install.html)
 
-# https://pypi.org/project/django-ckeditor/
-pip install django-ckeditor==6.4.2
+`pip install django-crispy-forms==1.14.0`
 
-# https://channels.readthedocs.io/en/stable/
-python -m pip install -U channels
+## Авто-очистка
+[cleanup](https://github.com/un1t/django-cleanup)
 
-# https://django-allauth.readthedocs.io/en/latest/installation.html
-pip install django-allauth==0.51.0
+`pip install django-cleanup==6.0.0`
 
-#https://pypi.org/project/python-dotenv/
-pip install python-dotenv==0.20.0
+## Редактор изображений
 
-'''python
+[pillow](https://pypi.org/project/Pillow/)
+
+`pip install pillow==9.2.0`
+
+## Текстовый редактор
+
+[ckeditor](https://pypi.org/project/django-ckeditor/)
+
+[документация на русском](https://russianblogs.com/article/5550650974/)
+
+`pip install django-ckeditor==6.4.2`
+
+## Каналы
+
+[channels](https://channels.readthedocs.io/en/stable/)
+
+`python -m pip install -U channels`
+
+## Аутентификация
+
+[django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
+
+`pip install django-allauth==0.51.0`
+
+## Настройка dotenv
+
+[dotenv](https://pypi.org/project/python-dotenv/)
+
+[документация на русском](https://pythobyte.com/python-dotenv-module-90588/)
+
+`pip install python-dotenv==0.20.0`
+
+```python
+
+# settings.py
+## importing the load_dotenv from the python-dotenv module
+from dotenv import load_dotenv
+
+## using existing module to specify location of the .env file
+from pathlib import Path
+import os
+
+load_dotenv()
+env_path = Path('.')/'.env'
+load_dotenv(dotenv_path=env_path)
+
+# retrieving keys and adding them to the project
+# from the .env file through their key names
+SECRET_KEY = os.getenv("SECRET_KEY")
+DOMAIN = os.getenv("DOMAIN")
+EMAIL = os.getenv("EMAIL")
+```
 
 
-#https://django-braces.readthedocs.io/en/latest/
-pip install django-braces==1.15.0
+## ???
 
-# https://www.mkdocs.org/ документирование проекта
-pip install mkdocs
+[braces](https://django-braces.readthedocs.io/en/latest/)
 
-# https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin
-pip install mkdocs-awesome-pages-plugin
+`pip install django-braces==1.15.0`
+
+## Документирование проекта при помощи `mkdocs`
+
+[mkdocs](https://www.mkdocs.org/)
+
+`pip install mkdocs`
+
+[плагин mkdocs](https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin)
+
+`pip install mkdocs-awesome-pages-plugin`
