@@ -4,7 +4,7 @@ practice_django4
 
 `pip install django`
 
-## Формы
+## Красивые формы
 
 [cripsy-forms](https://django-crispy-forms.readthedocs.io/en/latest/install.html)
 
@@ -41,7 +41,7 @@ practice_django4
 
 `pip install django-allauth==0.51.0`
 
-## Настройка dotenv
+## Настройка dotenv(сопоставляет ключи)
 
 [dotenv](https://pypi.org/project/python-dotenv/)
 
@@ -86,3 +86,9 @@ EMAIL = os.getenv("EMAIL")
 [плагин mkdocs](https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin)
 
 `pip install mkdocs-awesome-pages-plugin`
+
+##  Django Debug Toolbar 
+
+[Debug Toolbar](https://django-debug-toolbar.readthedocs.io/en/latest/installation.html)
+
+`python -m pip install django-debug-toolbar`
