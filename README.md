@@ -11,6 +11,6 @@
 4) Хостинг сайта
 
 
-В данном проекте будут применены такие инструменты, как Jupiter notebook,MKDOCS, Django Debug Toolbar и многие другие, указанные в requeiments.txt
+В данном проекте будут применены такие инструменты, как Jupiter notebook,MKDOCS, Django Debug Toolbar и многие другие, указанные в requirements.txt
 
 
