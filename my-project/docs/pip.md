@@ -92,3 +92,15 @@ EMAIL = os.getenv("EMAIL")
 [Debug Toolbar](https://django-debug-toolbar.readthedocs.io/en/latest/installation.html)
 
 `python -m pip install django-debug-toolbar`
+
+## Jupyter notebook
+
+[Jupyter](https://jupyter-org.translate.goog/install?_x_tr_sl=auto&_x_tr_tl=ru&_x_tr_hl=ru)
+
+`pip install notebook`
+
+## django-extensions
+
+[django-extensions](https://django-extensions.readthedocs.io/en/latest/installation_instructions.html)
+
+`pip install django-extensions`

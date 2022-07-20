@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 #  Django Debug Toolbar
 INTERNAL_IPS = [
     "127.0.0.1",
@@ -23,12 +21,9 @@ from django.contrib.messages import constants as messages
 # python-dotenv
 # https://pypi.org/project/python-dotenv/
 # .env в корне проекта
-
 from dotenv import load_dotenv
 # Loading ENV
 env_path = Path('.') / '.env'
-
-#env_path = '.test.env'
 load_dotenv(dotenv_path=env_path)
 
 # End python-dotenv
@@ -64,6 +59,7 @@ INSTALLED_APPS = [
     #'channels',
     # https://docs.djangoproject.com/en/4.0/ref/contrib/humanize/
     'django.contrib.humanize',
+    'django_extensions',
 
     # package install
     'allauth',
@@ -71,8 +67,6 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.github',
-    'allauth.socialaccount.providers.vk',
-
 
     'crispy_forms',
     'ckeditor',
@@ -252,3 +246,28 @@ CHANNEL_LAYERS = {
 }
 """
 # End django_channels
+
+
+# Email
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = os.getenv('EMAIL_PORT')
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = os.getenv('EMAIL_USER')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_PASS')
+
+# End email
+
+GOOGLE_RECAPTHA_SECRET_KEY = os.getenv('GOOGLE_RECAPTHA_SECRET_KEY')
+
+MESSAGE_TAGS = {
+        messages.DEBUG: 'alert-secondary',
+        messages.INFO: 'alert-info',
+        messages.SUCCESS: 'alert-success',
+        messages.WARNING: 'alert-warning',
+        messages.ERROR: 'alert-danger',
+}
+
+# в производстве убрать
+os.environ['DJANGO_ALLOW_ASYNC_UNSAFE'] = 'true'
